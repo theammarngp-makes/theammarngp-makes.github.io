@@ -4,30 +4,10 @@ A production-ready personal portfolio website built with pure HTML, CSS, and Jav
 
 ## Live Demo
 
-After deployment, your site will be available at:
-
 ```
-https://theammarngp-makes.github.io/portfolio/
+https://theammarngp-makes.github.io
 ```
 
-## Project Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── style.css           # Complete stylesheet
-├── script.js           # Animations & interactions
-├── README.md           # This file
-└── assets/
-    ├── profile.jpg     # Profile photo
-    ├── resume.pdf      # Resume (replace with your full resume)
-    ├── favicon.png     # Site favicon
-    └── project-images/
-        ├── olist.jpg       # Olist Sales Analysis screenshot
-        ├── cohort.jpg      # Cohort Retention screenshot
-        ├── rfm.jpg         # RFM Segmentation screenshot
-        └── reflection.jpg  # Daily Reflection Tree screenshot
-```
 
 ## Features
 
@@ -47,53 +27,6 @@ portfolio/
 - Vanilla JavaScript (no frameworks, no build tools)
 - Google Fonts (Inter, Space Grotesk, JetBrains Mono)
 - Formspree (contact form backend)
-
-## GitHub Pages Deployment
-
-### Option 1: Deploy from `/portfolio` folder (Recommended)
-
-1. **Create a new GitHub repository** named `portfolio` (or any name you prefer)
-
-2. **Push the portfolio folder contents** to the repository:
-
-   ```bash
-   cd portfolio
-   git init
-   git add .
-   git commit -m "Initial portfolio deployment"
-   git branch -M main
-   git remote add origin https://github.com/theammarngp-makes/portfolio.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages:**
-   - Go to your repository on GitHub
-   - Navigate to **Settings → Pages**
-   - Under **Source**, select **Deploy from a branch**
-   - Choose **main** branch and **/ (root)** folder
-   - Click **Save**
-
-4. **Wait 1–2 minutes** for deployment. Your site will be live at:
-   ```
-   https://theammarngp-makes.github.io/portfolio/
-   ```
-
-### Option 2: Deploy as User/Organization Site
-
-If you want the site at `https://theammarngp-makes.github.io/` (without `/portfolio`):
-
-1. Create a repository named **`theammarngp-makes.github.io`**
-2. Push the contents of the `portfolio/` folder to the root of that repository
-3. Enable GitHub Pages (same steps as above)
-4. Site will be live at `https://theammarngp-makes.github.io/`
-
-### Option 3: Deploy from a subfolder in an existing repo
-
-If your portfolio lives inside a larger repository:
-
-1. Push the `portfolio/` folder to your repo
-2. In **Settings → Pages**, set the source folder to `/portfolio`
-3. Site URL: `https://<username>.github.io/<repo-name>/`
 
 ## Customization Checklist
 

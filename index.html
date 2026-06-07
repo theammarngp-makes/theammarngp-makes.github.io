@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohammad Ammar — Data Analytics Intern Candidate building analytics systems focused on financial analytics, business intelligence, and dashboard architecture.">
+  <meta name="keywords" content="Mohammad Ammar, Data Analytics, Financial Analytics, Business Intelligence, SQL, Python, Dashboard, Internship, Portfolio">
+  <meta name="author" content="Mohammad Ammar">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohammad Ammar | Data Analytics Portfolio">
+  <meta property="og:description" content="Building analytics systems that transform data into decisions. Data Analytics, Financial Analytics & Business Intelligence.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:url" content="https://theammarngp-makes.github.io/portfolio/">
+  <meta property="og:site_name" content="Mohammad Ammar Portfolio">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammad Ammar | Data Analytics Portfolio">
+  <meta name="twitter:description" content="Building analytics systems that transform data into decisions.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <title>Mohammad Ammar | Data Analytics Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-text">
+        <span class="loader-label">Analytics Command Center</span>
+        <span class="loader-name">Mohammad Ammar</span>
+      </div>
+      <div class="loader-progress">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Mouse Glow -->
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav-header" id="navHeader">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">MA</span>
+        <span class="logo-text">Mohammad Ammar</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+
+      <!-- Analytics Environment -->
+      <div class="hero-environment" aria-hidden="true">
+        <!-- KPI Cards -->
+        <div class="float-card kpi-card kpi-1" data-speed="0.03">
+          <span class="kpi-label">Revenue Growth</span>
+          <span class="kpi-value text-accent">+18.4%</span>
+        </div>
+        <div class="float-card kpi-card kpi-2" data-speed="0.05">
+          <span class="kpi-label">Retention</span>
+          <span class="kpi-value text-secondary">76.3%</span>
+        </div>
+        <div class="float-card kpi-card kpi-3" data-speed="0.04">
+          <span class="kpi-label">Risk Score</span>
+          <span class="kpi-value text-highlight">A+</span>
+        </div>
+        <div class="float-card kpi-card kpi-4" data-speed="0.06">
+          <span class="kpi-label">Dashboard Accuracy</span>
+          <span class="kpi-value text-accent">98%</span>
+        </div>
+
+        <!-- SQL Terminal -->
+        <div class="float-card sql-terminal" data-speed="0.02">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">analytics.sql</span>
+          </div>
+          <pre class="terminal-body"><code id="sqlTyping"></code><span class="cursor-blink">|</span></pre>
+        </div>
+
+        <!-- BI Card -->
+        <div class="float-card bi-card" data-speed="0.035">
+          <div class="bi-header">Business Intelligence</div>
+          <div class="bi-bars">
+            <div class="bi-bar" style="--h: 65%"></div>
+            <div class="bi-bar" style="--h: 85%"></div>
+            <div class="bi-bar" style="--h: 45%"></div>
+            <div class="bi-bar" style="--h: 72%"></div>
+            <div class="bi-bar" style="--h: 90%"></div>
+          </div>
+        </div>
+
+        <!-- Chart Widget -->
+        <div class="float-card chart-widget" data-speed="0.045">
+          <svg viewBox="0 0 200 80" class="mini-chart">
+            <defs>
+              <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4ade80" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <polyline class="chart-area" points="0,60 30,45 60,50 90,30 120,35 150,15 180,20 200,10 200,80 0,80"/>
+            <polyline class="chart-line" points="0,60 30,45 60,50 90,30 120,35 150,15 180,20 200,10"/>
+          </svg>
+        </div>
+
+        <!-- Cohort Heatmap -->
+        <div class="float-card cohort-heatmap" data-speed="0.025">
+          <div class="heatmap-grid" id="heatmapGrid"></div>
+        </div>
+
+        <!-- Network Graph -->
+        <div class="float-card network-graph" data-speed="0.04">
+          <svg viewBox="0 0 120 120" class="network-svg">
+            <line x1="60" y1="20" x2="30" y2="60" class="net-edge"/>
+            <line x1="60" y1="20" x2="90" y2="60" class="net-edge"/>
+            <line x1="30" y1="60" x2="60" y2="100" class="net-edge"/>
+            <line x1="90" y1="60" x2="60" y2="100" class="net-edge"/>
+            <line x1="30" y1="60" x2="90" y2="60" class="net-edge"/>
+            <circle cx="60" cy="20" r="6" class="net-node primary"/>
+            <circle cx="30" cy="60" r="5" class="net-node"/>
+            <circle cx="90" cy="60" r="5" class="net-node"/>
+            <circle cx="60" cy="100" r="5" class="net-node secondary"/>
+          </svg>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="float-card dashboard-grid" data-speed="0.03">
+          <div class="dash-cell"></div>
+          <div class="dash-cell active"></div>
+          <div class="dash-cell"></div>
+          <div class="dash-cell"></div>
+          <div class="dash-cell active"></div>
+          <div class="dash-cell"></div>
+        </div>
+      </div>
+
+      <!-- Ticker Strip -->
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker">
+          <span>SQL Analytics Active</span>
+          <span class="ticker-dot">◆</span>
+          <span>Customer Segmentation</span>
+          <span class="ticker-dot">◆</span>
+          <span>Risk Monitoring</span>
+          <span class="ticker-dot">◆</span>
+          <span>KPI Tracking</span>
+          <span class="ticker-dot">◆</span>
+          <span>Business Intelligence</span>
+          <span class="ticker-dot">◆</span>
+          <span>Financial Reporting</span>
+          <span class="ticker-dot">◆</span>
+          <span>Dashboard Systems</span>
+          <span class="ticker-dot">◆</span>
+          <span>SQL Analytics Active</span>
+          <span class="ticker-dot">◆</span>
+          <span>Customer Segmentation</span>
+          <span class="ticker-dot">◆</span>
+          <span>Risk Monitoring</span>
+          <span class="ticker-dot">◆</span>
+          <span>KPI Tracking</span>
+          <span class="ticker-dot">◆</span>
+          <span>Business Intelligence</span>
+          <span class="ticker-dot">◆</span>
+          <span>Financial Reporting</span>
+          <span class="ticker-dot">◆</span>
+          <span>Dashboard Systems</span>
+        </div>
+      </div>
+
+      <!-- Live Metrics Strip -->
+      <div class="live-metrics" aria-hidden="true">
+        <div class="metric-item"><span class="metric-dot live"></span> Pipeline Active</div>
+        <div class="metric-item"><span class="metric-value" data-count="1247">0</span> Queries Run</div>
+        <div class="metric-item"><span class="metric-value" data-count="98">0</span>% Accuracy</div>
+        <div class="metric-item"><span class="metric-value" data-count="15">0</span> Dashboards</div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-badge reveal">Data Analytics · Financial Analytics · BI</div>
+        <h1 class="hero-title reveal">
+          <span class="hero-greeting">Mohammad Ammar</span>
+          <span class="hero-headline">Building Analytics Systems That Transform Data Into Decisions</span>
+        </h1>
+        <p class="hero-tags reveal">Data Analytics · Financial Analytics · Business Intelligence · Dashboard Architecture</p>
+        <p class="hero-desc reveal">
+          Engineering student building analytics systems focused on financial analytics, business intelligence, dashboard architecture, and institutional-style data workflows.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/resume.pdf" download class="btn btn-secondary">Download Resume</a>
+          <a href="#contact" class="btn btn-outline">Hire Me</a>
+        </div>
+        <div class="hero-profile reveal">
+          <img src="assets/profile.jpg" alt="Mohammad Ammar" class="profile-img" width="120" height="120" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About</span>
+          <h2 class="section-title">An Engineering Student Who Thinks Like An Analyst</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-story reveal">
+            <p>Self-driven learner focused on building institutional-grade analytics capabilities across data, finance, and business intelligence.</p>
+            <ul class="focus-list">
+              <li>Data Analytics</li>
+              <li>Financial Analytics</li>
+              <li>Business Intelligence</li>
+              <li>Dashboard Systems</li>
+              <li>Customer Analytics</li>
+              <li>Risk Analytics</li>
+            </ul>
+          </div>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">01</span>
+                <p>Started with Python &amp; SQL</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">02</span>
+                <p>Built exploratory analytics projects</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">03</span>
+                <p>Developed dashboards</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">04</span>
+                <p>Explored financial analytics</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">05</span>
+                <p>Built GitHub portfolio</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">06</span>
+                <p>Preparing for analytics internships</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-step">07</span>
+                <p>Moving toward advanced analytics and data science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Analytics Toolkit</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon">&#60;/&#62;</div>
+            <h3>Programming</h3>
+            <div class="skill-tags">
+              <span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon">&#9670;</div>
+            <h3>Analytics</h3>
+            <div class="skill-tags">
+              <span>EDA</span><span>KPI Analysis</span><span>Financial Analytics</span><span>Risk Analytics</span><span>Customer Analytics</span><span>Business Intelligence</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon">&#9632;</div>
+            <h3>Visualization</h3>
+            <div class="skill-tags">
+              <span>Tableau</span><span>Plotly</span><span>Streamlit</span><span>Power BI Concepts</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon">&#9881;</div>
+            <h3>Tools</h3>
+            <div class="skill-tags">
+              <span>Git</span><span>GitHub</span><span>VS Code</span><span>Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Analytics Projects</h2>
+          <p class="section-subtitle">End-to-end analytics work with real datasets, SQL pipelines, and business insights.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="assets/project-images/olist.jpg" alt="Olist E-Commerce Sales Analysis Dashboard" loading="lazy">
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3>Olist E-Commerce Sales Analysis</h3>
+              <p>End-to-end e-commerce analytics on the Olist dataset using SQL and Tableau. Uncovered revenue trends, customer behavior, and regional sales performance across 95K+ orders.</p>
+              <div class="project-impact">
+                <strong>Business Impact:</strong> Identified top product categories driving 80% of revenue and seasonal patterns for inventory planning.
+              </div>
+              <div class="project-tech">
+                <span>SQL</span><span>Python</span><span>Tableau</span><span>Pandas</span>
+              </div>
+              <a href="https://github.com/theammarngp-makes/olist-sales-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="assets/project-images/cohort.jpg" alt="E-Commerce Cohort Retention Analysis Dashboard" loading="lazy">
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3>E-Commerce Cohort Retention Analysis</h3>
+              <p>Cohort analysis on Olist e-commerce data to measure customer return rates over time. Built retention heatmaps and analyzed monthly cohort behavior patterns.</p>
+              <div class="project-impact">
+                <strong>Business Impact:</strong> Revealed sharp retention drop after first month, highlighting critical one-time buyer problem for marketing strategy.
+              </div>
+              <div class="project-tech">
+                <span>SQL</span><span>Tableau</span><span>Cohort Analysis</span><span>Window Functions</span>
+              </div>
+              <a href="https://github.com/theammarngp-makes/E-commerce-cohort-retention-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="assets/project-images/rfm.jpg" alt="E-Commerce RFM Customer Segmentation Dashboard" loading="lazy">
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3>E-Commerce RFM Customer Segmentation</h3>
+              <p>RFM segmentation analysis identifying Loyal, Champions, At-Risk, and Lost customer segments. Delivered actionable insights for retention and revenue optimization.</p>
+              <div class="project-impact">
+                <strong>Business Impact:</strong> Loyal customers contribute 32% of revenue; At-Risk segment flagged for early intervention campaigns.
+              </div>
+              <div class="project-tech">
+                <span>SQL</span><span>Python</span><span>Tableau</span><span>RFM Analysis</span>
+              </div>
+              <a href="https://github.com/theammarngp-makes/ecommerce-rfm-customer-segmentation" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="assets/project-images/reflection.jpg" alt="Daily Reflection Tree Application" loading="lazy">
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3>Daily Reflection Tree</h3>
+              <p>Deterministic end-of-day reflection system using decision tree logic. Demonstrates knowledge engineering, system design, and psychology-to-data translation without LLM dependency.</p>
+              <div class="project-impact">
+                <strong>Business Impact:</strong> Showcases structured decision systems, auditability, and user-centered analytics workflow design.
+              </div>
+              <div class="project-tech">
+                <span>Python</span><span>FastAPI</span><span>Decision Trees</span><span>System Design</span>
+              </div>
+              <a href="https://github.com/theammarngp-makes/daily-reflection-tree" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View on GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Experience -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Financial Risk &amp; Securitisation Analytics</h2>
+        </div>
+        <div class="experience-card reveal">
+          <div class="confidential-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Confidential Work
+          </div>
+          <p class="experience-note">Selected work remains confidential due to project restrictions. Never exposing confidential project content.</p>
+          <div class="experience-tags">
+            <span>Delinquency Analytics</span>
+            <span>Vintage Analysis</span>
+            <span>Stress Testing</span>
+            <span>Risk Monitoring</span>
+            <span>Dashboard Architecture</span>
+            <span>Investor Reporting</span>
+            <span>IFRS9 Concepts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Focus -->
+    <section id="focus" class="section focus">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Now</span>
+          <h2 class="section-title">Current Focus</h2>
+        </div>
+        <div class="focus-grid">
+          <div class="focus-card reveal">Data Analytics</div>
+          <div class="focus-card reveal">Financial Analytics</div>
+          <div class="focus-card reveal">Dashboard Systems</div>
+          <div class="focus-card reveal">Business Intelligence</div>
+          <div class="focus-card reveal">SQL</div>
+          <div class="focus-card reveal">Python</div>
+          <div class="focus-card reveal">Analytics Engineering</div>
+          <div class="focus-card reveal">Internship Preparation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internship Readiness -->
+    <section id="readiness" class="section readiness">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Readiness</span>
+          <h2 class="section-title">Why I'm Internship Ready</h2>
+        </div>
+        <div class="readiness-grid">
+          <div class="readiness-card reveal">
+            <div class="readiness-num">01</div>
+            <h3>Real SQL Projects</h3>
+            <p>30+ SQL queries across e-commerce analytics with production-style data pipelines.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">02</div>
+            <h3>Business Problem Solving</h3>
+            <p>Every project connects analysis to actionable business recommendations.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">03</div>
+            <h3>Dashboard Development</h3>
+            <p>Interactive Tableau dashboards deployed for stakeholder-ready insights.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">04</div>
+            <h3>GitHub Portfolio</h3>
+            <p>Documented repositories with README insights, SQL scripts, and visualizations.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">05</div>
+            <h3>Financial Analytics Exposure</h3>
+            <p>Experience with delinquency, vintage analysis, stress testing, and IFRS9 concepts.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">06</div>
+            <h3>Self-Driven Learning</h3>
+            <p>Continuous upskilling through projects, datasets, and analytics exploration.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">07</div>
+            <h3>Analytical Thinking</h3>
+            <p>Structured approach to KPI definition, hypothesis testing, and insight generation.</p>
+          </div>
+          <div class="readiness-card reveal">
+            <div class="readiness-num">08</div>
+            <h3>Consistency &amp; Execution</h3>
+            <p>Sustained project delivery demonstrating reliability and follow-through.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics Lab -->
+    <section id="lab" class="section lab">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Exploration</span>
+          <h2 class="section-title">Analytics Lab</h2>
+          <p class="section-subtitle">Current areas of active exploration and skill development.</p>
+        </div>
+        <div class="lab-grid">
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Customer Analytics</h3>
+            <p>Segmentation, cohort analysis, and behavioral pattern recognition.</p>
+          </div>
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Financial Analytics</h3>
+            <p>Risk metrics, delinquency trends, and portfolio performance analysis.</p>
+          </div>
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Retention Analytics</h3>
+            <p>Cohort retention, churn signals, and lifecycle value modeling.</p>
+          </div>
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Risk Analytics</h3>
+            <p>Stress testing frameworks, vintage curves, and monitoring dashboards.</p>
+          </div>
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Dashboard Systems</h3>
+            <p>Institutional-grade BI architecture and interactive reporting layers.</p>
+          </div>
+          <div class="lab-card reveal">
+            <div class="lab-glow"></div>
+            <h3>Data Storytelling</h3>
+            <p>Translating complex analytics into clear, decision-ready narratives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Mission -->
+    <section id="mission" class="section mission">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Trajectory</span>
+          <h2 class="section-title">Career Mission</h2>
+        </div>
+        <div class="roadmap reveal">
+          <div class="roadmap-step active">
+            <div class="roadmap-node"></div>
+            <span class="roadmap-label">Engineering Student</span>
+          </div>
+          <div class="roadmap-connector"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-node"></div>
+            <span class="roadmap-label">Data Analytics Intern</span>
+          </div>
+          <div class="roadmap-connector"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-node"></div>
+            <span class="roadmap-label">Data Analyst</span>
+          </div>
+          <div class="roadmap-connector"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-node"></div>
+            <span class="roadmap-label">Financial Analytics</span>
+          </div>
+          <div class="roadmap-connector"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-node"></div>
+            <span class="roadmap-label">Data Scientist</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section resume-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Resume</span>
+          <h2 class="section-title">Professional Profile</h2>
+        </div>
+        <div class="resume-actions reveal">
+          <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open Resume</a>
+        </div>
+        <div class="resume-preview reveal">
+          <iframe src="assets/resume.pdf" title="Mohammad Ammar Resume Preview" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle contact-opportunity">Open to Data Analytics, Business Intelligence, and Financial Analytics Internship Opportunities.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:theammarngp@gmail.com" id="contactEmail">theammarngp@gmail.com</a>
+              <button class="copy-btn" id="copyEmailBtn" type="button" aria-label="Copy email address">Copy Email</button>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+917058429525">+91 7058429525</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/theammarngp-makes" target="_blank" rel="noopener noreferrer">github.com/theammarngp-makes</a>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mlgvrdnd" method="POST">
+            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
+            <div class="form-success" id="formSuccess" hidden>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p>Thank you! Your message has been sent successfully. I'll get back to you soon.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Mohammad Ammar</span>
+        <p>Data Analytics · Financial Analytics · Business Intelligence</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:theammarngp@gmail.com">theammarngp@gmail.com</a>
+        <a href="https://github.com/theammarngp-makes" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button class="back-to-top" id="backToTop" type="button">Back To Top</button>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Mohammad Ammar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
